@@ -1,0 +1,5 @@
+Django==3.2
+django-oscar==3.2
+django-oscar-api==3.2
+djangorestframework==3.14.0
+stripe==2.61.0
