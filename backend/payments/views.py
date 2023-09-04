@@ -6,6 +6,7 @@ from django.shortcuts import redirect
 
 import stripe
 
+# Set the Stripe API key
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 class StripeCheckoutView(APIView):
@@ -24,9 +25,11 @@ class StripeCheckoutView(APIView):
                 cancel_url=settings.SITE_URL + '/?canceled=true',
             )
 
+            # Redirect to the Stripe checkout page
             return redirect(checkout_session.url)
         except:
+            # Handle exceptions
             return Response(
-                {'error': 'Something went wrong when creating stripe checkout session'},
+                {'error': 'Something went wrong when creating a Stripe checkout session'},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )

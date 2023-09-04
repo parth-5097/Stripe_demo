@@ -18,6 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/", include("oscarapi.urls")),
-    path('stripe/', include('payments.urls')),
+    path("api/", include("oscarapi.urls")), # Oscar Dashboard API Access
+    path('stripe/', include('payments.urls')), # Stripe API Access
 ]

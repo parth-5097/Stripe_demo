@@ -182,16 +182,18 @@ STATIC_URL = '/static/'
 
 HAYSTACK_CONNECTIONS = {
     'default': {
-        'ENGINE': '',
+        'ENGINE': '', # Configure with the appropriate search engine
     },
 }
 
+# Configure REST Framework permissions
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny'
     ]
 }
 
+# Define the site URL (replace with your actual site URL)
 SITE_URL = 'http://localhost:5173'
 
 STRIPE_SECRET_KEY = 'sk_test_51LkHYhLn9sSXUv343eZt0qXS1WHfjqC8IB8RWkSrwhuZjsqE56CbzoTsK9zda01V9VCxarxh00QYfoKir9BLqMr300v9AK3Xze'
